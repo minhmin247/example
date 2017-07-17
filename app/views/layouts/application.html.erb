@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <% provide :title, t("application.title") %>
+    <title><%= full_title yield :title %></title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag "application", media: "all",
       "data-turbolinks-track": "reload" %>
