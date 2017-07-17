@@ -32,3 +32,6 @@
 # Ignore
 /.framgia-ci-reports/
 .framgia-ci-result.temp.yml
+
+# Ignore Spring files.
+/spring/*.pid
