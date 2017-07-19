@@ -25,10 +25,9 @@ RemoveEmptyHelpersCheck: { }
 RemoveTrailingWhitespaceCheck: { }
 RemoveUnusedMethodsInControllersCheck: {
   except_methods: [
-    'UsersController#new', 'StaticPagesController#home',
-    'StaticPagesController#help', 'StaticPagesController#about'
+    'UsersController#new'
   ],
-#  ignored_files: ['controllers/static_pages_controller.rb']
+  ignored_files: ['controllers/static_pages_controller.rb']
 }
 RemoveUnusedMethodsInHelpersCheck: { except_methods: [] }
 RemoveUnusedMethodsInModelsCheck: { except_methods: [] }

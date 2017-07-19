@@ -6,7 +6,12 @@ en:
     text1: "This is the home page for the"
     text2: "Ruby on Rails Tutorial"
     text3: "sample application."
-    railslink: "http://www.railstutorial.org/"
+    text4: "News"
+    link1: "http://www.railstutorial.org/"
+    link2: "http://rubyonrails.org/"
+    link3: "http://news.railstutorial.org/"
+    signup: "Sign up now!"
+    logo: "Rails logo"
   help:
     title: "Help"
     content: |
@@ -32,4 +37,13 @@ en:
     st2: "contact page"
   header: "Ruby on Rails Tutorial Sample App"
   application:
-    title: "Example Application"
+    title: "Sample App"
+  login: "Login"
+  footer:
+    content: |
+      "The <a href="http://www.railstutorial.org/">
+      Ruby on Rails Tutorial</a> by
+      <a href="http://www.michaelhartl.com/">Michael Hartl</a>"
+  signup:
+    title: "Sign up"
+    text1: "This will be a signup page for new users."
