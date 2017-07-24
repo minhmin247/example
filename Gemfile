@@ -22,6 +22,7 @@ gem "fog", "1.40.0"
 gem "will_paginate", "3.1.5"
 gem "bootstrap-will_paginate", "1.0.0"
 gem "jquery-rails", "4.3.1"
+gem "config"
 
 group :development, :test do
   gem "rspec"
