@@ -8,6 +8,7 @@ end
 gem "rails", "~> 5.1.2"
 gem "sqlite3"
 gem "puma", "~> 3.7"
+gem "bootstrap-sass"
 gem "sass-rails", "~> 5.0"
 gem "uglifier", ">= 1.3.0"
 gem "coffee-rails", "~> 4.2"
@@ -20,7 +21,6 @@ gem "mini_magick", "4.7.0"
 gem "fog", "1.40.0"
 gem "will_paginate", "3.1.5"
 gem "bootstrap-will_paginate", "1.0.0"
-gem "bootstrap-sass", "3.3.7"
 gem "jquery-rails", "4.3.1"
 
 group :development, :test do
@@ -38,7 +38,7 @@ group :development, :test do
   gem "rubocop-checkstyle_formatter", require: false
   gem "eslint-rails", git: "https://github.com/octoberstorm/eslint-rails",
     require: false
-  gem "scss_lint", "0.54.0"
+  gem "scss_lint", "0.54.0", require: false
   gem "scss_lint_reporter_checkstyle", require: false
   gem "rails_best_practices"
   gem "reek"
