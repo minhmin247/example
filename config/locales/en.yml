@@ -41,9 +41,16 @@ en:
   login: "Login"
   footer:
     content: |
-      "The <a href="http://www.railstutorial.org/">
+      The <a href="http://www.railstutorial.org/">
       Ruby on Rails Tutorial</a> by
-      <a href="http://www.michaelhartl.com/">Michael Hartl</a>"
+      <a href="http://www.michaelhartl.com/">Michael Hartl</a>
   signup:
     title: "Sign up"
     text1: "This will be a signup page for new users."
+    text2: "Confirmation"
+    text3: "Create my account"
+    text4: "Welcome to the Sample App!"
+  error:
+    the_form: "The form contains"
+    error: "error"
+    text1: "User not exist!"
