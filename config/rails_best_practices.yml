@@ -27,7 +27,8 @@ RemoveUnusedMethodsInControllersCheck: {
   except_methods: [
     'UsersController#new'
   ],
-  ignored_files: ['controllers/static_pages_controller.rb']
+  ignored_files: ['controllers/static_pages_controller.rb',
+    controllers/users_controller.rb]
 }
 RemoveUnusedMethodsInHelpersCheck: { except_methods: [] }
 RemoveUnusedMethodsInModelsCheck: { except_methods: [] }
