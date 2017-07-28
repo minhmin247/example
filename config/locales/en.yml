@@ -12,6 +12,11 @@ en:
     link3: "http://news.railstutorial.org/"
     signup: "Sign up now!"
     logo: "Rails logo"
+    user: "Users"
+    profile: "Profile"
+    setting: "Settings"
+    logout: "Log out"
+    account: "Account"
   help:
     title: "Help"
     content: |
@@ -38,7 +43,9 @@ en:
   header: "Ruby on Rails Tutorial Sample App"
   application:
     title: "Sample App"
-  login: "Login"
+  login:
+    title: "Login"
+    text1: "New user?"
   footer:
     content: |
       The <a href="http://www.railstutorial.org/">
@@ -50,7 +57,9 @@ en:
     text2: "Confirmation"
     text3: "Create my account"
     text4: "Welcome to the Sample App!"
+    text5: "Sign up now!"
   error:
     the_form: "The form contains"
     error: "error"
     text1: "User not exist!"
+    text2: "Invalid email/password combination"
