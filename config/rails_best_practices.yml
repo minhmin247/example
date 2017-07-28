@@ -24,11 +24,11 @@ RemoveEmptyHelpersCheck: { }
 #RemoveTabCheck: { }
 RemoveTrailingWhitespaceCheck: { }
 RemoveUnusedMethodsInControllersCheck: {
-  except_methods: [
-    'UsersController#new'
-  ],
-  ignored_files: ['controllers/static_pages_controller.rb',
-    controllers/users_controller.rb]
+  except_methods: ['UsersController#new', 'SessionsController#new',
+    'SessionsController#create', 'SessionsController#destroy',
+    'UsersController#show', 'UsersController#create'],
+  ignored_files: ['controllers/application_controller.rb',
+    'controllers/static_pages_controller.rb']
 }
 RemoveUnusedMethodsInHelpersCheck: { except_methods: [] }
 RemoveUnusedMethodsInModelsCheck: { except_methods: [] }
