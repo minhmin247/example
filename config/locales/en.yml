@@ -46,6 +46,7 @@ en:
   login:
     title: "Login"
     text1: "New user?"
+    text2: "Remember me on this computer"
   footer:
     content: |
       The <a href="http://www.railstutorial.org/">
