@@ -1,9 +1,11 @@
 class SessionsController < ApplicationController
+  attr_reader :user
+
   def new; end
 
   def create
     session = params[:session]
-    user = User.find_by email: session[:email].downcase
+    @user = User.find_by email: session[:email].downcase
     if user && user.authenticate(session[:password])
       login_success user
     else
@@ -12,7 +14,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    log_out
+    log_out if logged_in?
     redirect_to root_url
   end
 
@@ -20,6 +22,8 @@ class SessionsController < ApplicationController
 
   def login_success user
     log_in user
+    session = params[:session]
+    session[:remember_me] == "1" ? remember(user) : forget(user)
     redirect_to user
   end
 
