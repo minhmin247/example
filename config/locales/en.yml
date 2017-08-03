@@ -64,3 +64,18 @@ en:
     error: "error"
     text1: "User not exist!"
     text2: "Invalid email/password combination"
+    text3: "Please log in."
+  edit:
+    title: "Edit user"
+    text1: "Update your profile"
+    text2: "Profile updated"
+    confirm: "Confirmation"
+    save: "Save changes"
+    change: "Change"
+    link1: "http://gravatar.com/emails"
+  user_index:
+    text1: "All users"
+    text2: "You sure?"
+    delete: "Delete"
+  destroy:
+    text1: "User deleted"
