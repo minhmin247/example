@@ -79,3 +79,13 @@ en:
     delete: "Delete"
   destroy:
     text1: "User deleted"
+  activation:
+    hi: "Hi "
+    text1: "Welcome to the Sample App! Click on the link below to activate your
+     account:"
+    text2: "Please check your email to activate your account."
+    text3: "Account activated!"
+    text4: "Invalid activation link"
+    text5: "Account not activated. Check your email for the activation link."
+    text7: "Account activation"
+    activate: "Activate"
