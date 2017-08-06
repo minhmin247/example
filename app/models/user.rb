@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :microposts, dependent: :destroy
+
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
 
   attr_reader :remember_token, :activation_token, :reset_token
@@ -30,6 +32,10 @@ class User < ApplicationRecord
     end
   end
 
+  def current_user? user
+    self == user
+  end
+
   def remember
     @remember_token = User.new_token
     update_attributes remember_digest: User.digest(remember_token)
@@ -39,10 +45,6 @@ class User < ApplicationRecord
     digest = send "#{attribute}_digest"
     return false if digest.blank?
     BCrypt::Password.new(digest).is_password? token
-  end
-
-  def current_user? user
-    self == user
   end
 
   def forget
@@ -74,6 +76,10 @@ class User < ApplicationRecord
 
   def password_reset_expired?
     reset_sent_at < 2.hours.ago
+  end
+
+  def feed
+    microposts
   end
 
   private
