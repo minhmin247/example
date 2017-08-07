@@ -3,3 +3,10 @@ password_length_min: 6
 name_length_max: 50
 gravatar_size: 80
 gravatar_index: 50
+gravatar_size_2: 50
+gravatar_size_3: 30
+content_length: 140
+picture_limit: 400
+upload_size: 5
+file_type: image/jpeg,image/gif,image/png
+reset_time: 2

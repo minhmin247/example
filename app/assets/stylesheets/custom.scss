@@ -5,6 +5,9 @@ $gray-medium-light: #eaeaea;
 $white: #fff;
 $white-gray: #bbb;
 $red: #f00;
+$e8e8e8: #e8e8e8;
+$gray: #808080;
+$blue: #00f;
 
 @mixin box-sizing {
   box-sizing: border-box;
@@ -152,6 +155,50 @@ aside {
   margin-top: 15px;
 }
 
+.stats {
+  margin-top: 0;
+  overflow: auto;
+  padding: 0;
+
+  a {
+    border-left: 1px solid $gray-lighter;
+    color: $gray;
+    float: left;
+    padding: 0 10px;
+
+    &:first-child {
+      border: 0;
+      padding-left: 0;
+    }
+
+    &:hover {
+      color: $blue;
+      text-decoration: none;
+    }
+  }
+
+  strong {
+    display: block;
+  }
+}
+
+.user-avatars {
+  margin-top: 10px;
+  overflow: auto;
+
+  .gravatar {
+    margin: 1px;
+  }
+
+  a {
+    padding: 0;
+  }
+}
+
+.users-follow {
+  padding: 0;
+}
+
 input,
 textarea,
 select,
@@ -204,5 +251,50 @@ input {
     border-bottom: 1px solid $gray-lighter;
     overflow: auto;
     padding: 10px 0;
+  }
+}
+
+.microposts {
+  list-style: none;
+  padding: 0;
+
+  li {
+    border-top: 1px solid $e8e8e8;
+    padding: 10px 0;
+  }
+
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+
+  .content {
+    display: block;
+    margin-left: 60px;
+
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+
+  .timestamp {
+    color: $gray-light;
+    display: block;
+    margin-left: 60px;
+  }
+
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+}
+
+.picture {
+  margin-top: 10px;
+
+  input {
+    border: 0;
   }
 }

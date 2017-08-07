@@ -7,3 +7,6 @@ FeatureEnvy:
 exclude_paths:
   - 'vendor'
   - 'db/migrate'
+
+TooManyMethods:
+  max_methods: 20

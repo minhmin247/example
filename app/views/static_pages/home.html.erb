@@ -1,10 +1,31 @@
-<div class="center jumbotron">
-  <h1> <%= t "home.title" %> </h1>
-  <h2>
-    <%= t "home.text1" %>
-    <%= link_to t("home.text2"), t("home.link1") %>
-    <%= t "home.text3" %>
-  </h2>
-  <%= link_to t("home.signup"), signup_path, class: "btn btn-lg btn-primary" %>
-</div>
-<%= link_to image_tag("rails.png", alt: t("home.logo")), t("home.link2") %>
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render "shared/user_info" %>
+      </section>
+      <section class="stats">
+        <%= render "shared/stats", user: @user %>
+      </section>
+      <section class="micropost_form">
+        <%= render "shared/micropost_form", micropost: @micropost %>
+      </section>
+    </aside>
+    <div class="col-md-8">
+      <h3><%= t("micropost.feed") %></h3>
+      <%= render "shared/feed", feed_items: @feed_items %>
+    </div>
+  </div>
+<% else %>
+  <div class="center jumbotron">
+    <h1> <%= t "home.title" %> </h1>
+    <h2>
+      <%= t "home.text1" %>
+      <%= link_to t("home.text2"), t("home.link1") %>
+      <%= t "home.text3" %>
+    </h2>
+    <%= link_to t("home.signup"), signup_path,
+      class: "btn btn-lg btn-primary" %>
+  </div>
+  <%= link_to image_tag("rails.png", alt: t("home.logo")), t("home.link2") %>
+<% end %>
