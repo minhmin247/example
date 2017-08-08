@@ -4,6 +4,8 @@ class UsersController < ApplicationController
   before_action :correct_user, only: %i(edit update)
   before_action :admin_user, only: :destroy
 
+  attr_reader :users
+
   def index
     @users = User.paginate page: params[:page]
   end
@@ -24,7 +26,13 @@ class UsersController < ApplicationController
   end
 
   def show
+    active_relationships = current_user.active_relationships
     @microposts = user.microposts.paginate page: params[:page]
+    if current_user.following? user
+      @relationship = active_relationships.find_by followed_id: user.id
+    else
+      @relationship = active_relationships.build
+    end
   end
 
   def edit; end
